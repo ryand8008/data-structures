@@ -19,10 +19,9 @@ var stackMethods = {
   },
 
   pop: function() {
+    var item = this.storage[this.index - 1];
+    delete this.storage[this.index - 1];
     this.index--;
-    var item = this.storage[this.index];
-    delete this.storage[this.index];
-
     return item;
   },
 
